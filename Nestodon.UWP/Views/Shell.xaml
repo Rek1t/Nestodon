@@ -1,0 +1,10 @@
+﻿<Page xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:interactivity="using:Microsoft.Xaml.Interactivity"
+      xmlns:core="using:Microsoft.Xaml.Interactions.Core"
+      xmlns:class="using:Nestodon.UWP.Class"
+      xmlns:mvvmLight="using:GalaSoft.MvvmLight"
+      xmlns:converters="using:Nestodon.UWP.Converters"
+      xmlns:windowsStateTriggers="using:WindowsStateTriggers"
+      x:Class="Nestodon.UWP.Views.Shell">
+</Page>

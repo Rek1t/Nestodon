@@ -1,0 +1,64 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:oasis:names:tc:xliff:document:1.2 xliff-core-1.2-transitional.xsd">
+  <file datatype="xml" source-language="fr-FR" target-language="en" original="NESTODON.UWP/STRINGS/FR-FR/RESOURCES.RESW" tool-id="MultilingualAppToolkit" product-name="n/a" product-version="n/a" build-num="n/a">
+    <header>
+      <tool tool-id="MultilingualAppToolkit" tool-name="Multilingual App Toolkit" tool-version="4.0.6796.0" tool-company="Microsoft" />
+    </header>
+    <body>
+      <group id="NESTODON.UWP/STRINGS/FR-FR/RESOURCES.RESW" datatype="resx">
+        <trans-unit id="AccueilMenuLabel" translate="yes" xml:space="preserve">
+          <source>Accueil</source>
+          <target state="new">Accueil</target>
+        </trans-unit>
+        <trans-unit id="AuthentificationTitle.Text" translate="yes" xml:space="preserve">
+          <source>Nestodon</source>
+          <target state="new">Nestodon</target>
+        </trans-unit>
+        <trans-unit id="ButtonConnect.Content" translate="yes" xml:space="preserve">
+          <source>SE CONNECTER</source>
+          <target state="new">SE CONNECTER</target>
+        </trans-unit>
+        <trans-unit id="DisconnectMenuLabel" translate="yes" xml:space="preserve">
+          <source>Se déconnecter</source>
+          <target state="new">Se déconnecter</target>
+        </trans-unit>
+        <trans-unit id="WatermarkPassword.Text" translate="yes" xml:space="preserve">
+          <source>MOT DE PASSE</source>
+          <target state="new">MOT DE PASSE</target>
+        </trans-unit>
+        <trans-unit id="WatermarkUser.Text" translate="yes" xml:space="preserve">
+          <source>UTILISATEUR</source>
+          <target state="new">UTILISATEUR</target>
+        </trans-unit>
+        <trans-unit id="QuestionResponseNon" translate="yes" xml:space="preserve">
+          <source>Non</source>
+          <target state="new">Non</target>
+        </trans-unit>
+        <trans-unit id="QuestionResponseOui" translate="yes" xml:space="preserve">
+          <source>Oui</source>
+          <target state="new">Oui</target>
+        </trans-unit>
+        <trans-unit id="ResultViewLabel" translate="yes" xml:space="preserve">
+          <source>Résultats de la recherche</source>
+          <target state="new">Résultats de la recherche</target>
+        </trans-unit>
+        <trans-unit id="SearchBoxShell.PlaceholderText" translate="yes" xml:space="preserve">
+          <source>Rechercher</source>
+          <target state="new">Rechercher</target>
+        </trans-unit>
+        <trans-unit id="ErrorMessageAuthentification" translate="yes" xml:space="preserve">
+          <source>Nom d'utilisateur ou mot de passe incorrect</source>
+          <target state="new">Nom d'utilisateur ou mot de passe incorrect</target>
+        </trans-unit>
+        <trans-unit id="QuestionDeconnecter" translate="yes" xml:space="preserve">
+          <source>Etes-vous sûr de vouloir vous déconnecter ?</source>
+          <target state="new">Etes-vous sûr de vouloir vous déconnecter ?</target>
+        </trans-unit>
+        <trans-unit id="QuestionDeconnecterTitre" translate="yes" xml:space="preserve">
+          <source>Déconnection</source>
+          <target state="new">Déconnection</target>
+        </trans-unit>
+      </group>
+    </body>
+  </file>
+</xliff>

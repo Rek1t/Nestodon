@@ -1,0 +1,21 @@
+﻿<ResourceDictionary
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Nestodon.UWP.Themes">
+
+    <!-- Brush -->
+    <SolidColorBrush x:Key="BackgroundSplitView" Color="{StaticResource ColorBackgroundSplit}" />
+    <SolidColorBrush x:Key="ForegroundSplitMenuItems" Color="{StaticResource ColorMenuItems}" />
+    <SolidColorBrush x:Key="PointerOverMenuItems" Color="{StaticResource ColorPointerOverMenuItem}" />
+    <SolidColorBrush x:Key="PressedMenuItems" Color="{StaticResource ColorPressedMenuItem}" />
+    <SolidColorBrush x:Key="BackgroundPage" Color="{StaticResource ColorBackgroundPage}" />
+    <SolidColorBrush x:Key="BrushAccent" Color="{StaticResource ColorAccent}" />
+    <SolidColorBrush x:Key="BrushInvertAccent" Color="{StaticResource ColorInvertAccent}" />
+    <SolidColorBrush x:Key="BackgroundPivotHeader" Color="{StaticResource ColorBackgroundPivotHeader}" />
+    <SolidColorBrush x:Key="FontColor" Color="{StaticResource ColorFont}" />
+    <SolidColorBrush x:Key="PivotHeaderFontColor" Color="{StaticResource ColorFontPivotHeader}" />
+    <SolidColorBrush x:Key="BackgroundList" Color="{StaticResource ColorBackgroundList}" />
+    <SolidColorBrush x:Key="BackgroundGridSaisie" Color="{StaticResource ColorBackgroundGridSaisie}" />
+    <SolidColorBrush x:Key="BorderTextBox" Color="{StaticResource ColorBorderTextBox}" />
+    <SolidColorBrush x:Key="DisabledBrush" Color="{StaticResource ColorDisabled}" />
+</ResourceDictionary>

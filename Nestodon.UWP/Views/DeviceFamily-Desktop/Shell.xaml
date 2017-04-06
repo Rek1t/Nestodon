@@ -1,0 +1,52 @@
+﻿<Page
+    x:Class="Nestodon.UWP.Views.Shell"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Nestodon.UWP"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:converters="using:Nestodon.UWP.Converters"
+    xmlns:windowsStateTriggers="using:WindowsStateTriggers"
+    mc:Ignorable="d"
+    DataContext="{Binding ShellViewModelInstance, Source={StaticResource Locator}}">
+    
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+
+        <Grid Padding="0" Canvas.ZIndex="99">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="60" />
+                <ColumnDefinition Width="Auto" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="300" />
+            </Grid.ColumnDefinitions>
+            <Button Content="&#xE700;" Command="{Binding ToggleSplitViewPaneCommand}" Style="{StaticResource IconButtonStyle}" Grid.Column="0"/>
+            <TextBlock Style="{StaticResource AppTitleTextBlockStyle}" Text="{Binding Path=Content, ElementName=ContentFrame, Converter={StaticResource FrameToTitleConverter}, UpdateSourceTrigger=PropertyChanged}" Grid.Column="1"/>
+            <CommandBar Grid.Column="2" x:Name="ActionsCommand" Background="Transparent"/>
+            <AutoSuggestBox x:Name="AutoSuggestBox" x:Uid="SearchBoxShell" Grid.Column="3" Margin="20,0,20,0" VerticalAlignment="Center" QueryIcon="Find" QuerySubmitted="OnQuerySubmitted" Visibility="{Binding IsSearchVisible, Converter={StaticResource BooleanToVisibilityConverter}}"/>
+        </Grid>
+
+        <SplitView x:Name="SplitView" IsPaneOpen="{Binding IsSplitViewPaneOpen, Mode=TwoWay}" Grid.Row="1" DisplayMode="CompactInline">
+            <SplitView.Pane>
+                <Grid Background="{StaticResource BackgroundSplitView}">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="Auto" />
+                    </Grid.RowDefinitions>
+
+                    <!-- Menu principal -->
+                    <ListView ItemsSource="{Binding MenuItems}" SelectionMode="Single" Grid.Row="0" Margin="0,10,0,30" ItemContainerStyle="{StaticResource ListViewItemNoneInteractions}" ItemTemplate="{StaticResource MenuItemTemplate}" />
+
+                    <!-- Menu secondaire -->
+                    <ListView ItemsSource="{Binding SecondaryMenuItems}" Grid.Row="1" ItemContainerStyle="{StaticResource ListViewItemNoneInteractions}" ItemTemplate="{StaticResource MenuItemTemplate}" />
+                </Grid>
+            </SplitView.Pane>
+            <SplitView.Content>
+                <Frame x:Name="ContentFrame" Canvas.ZIndex="2"/>
+            </SplitView.Content>
+        </SplitView>
+    </Grid>
+</Page>

@@ -1,0 +1,23 @@
+﻿<Application x:Class="Nestodon.UWP.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+			 xmlns:ignore="http://www.galasoft.ch/ignore"
+			 xmlns:vm="using:Nestodon.UWP.ViewModels.Base"
+			 mc:Ignorable="d ignore"
+             RequestedTheme="Light">
+    <Application.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="Themes/Colors.xaml" />
+                <ResourceDictionary Source="Themes/Brushs.xaml" />
+                <ResourceDictionary Source="Themes/Generic.xaml"/>
+                <ResourceDictionary Source="Converters.xaml" />
+                <ResourceDictionary Source="DataTemplates.xaml" />
+            </ResourceDictionary.MergedDictionaries>
+            <vm:ViewModelLocator x:Key="Locator" d:IsDataSource="True" />
+        </ResourceDictionary>
+    </Application.Resources>
+    
+</Application>

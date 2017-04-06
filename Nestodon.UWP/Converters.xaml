@@ -1,0 +1,12 @@
+﻿<ResourceDictionary
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Nestodon.UWP"
+    xmlns:converters="using:Nestodon.UWP.Converters"
+    xmlns:converters1="using:WinRTXamlToolkit.Converters">
+
+    <converters:FrameToTitleConverter x:Key="FrameToTitleConverter" />
+    <converters1:BooleanToVisibilityConverter x:Key="BooleanToVisibilityConverter" />
+    <converters:NullValueToVisibilityConverter x:Key="NullValueToVisibilityConverter" />
+    <converters:BooleanToVisibilityWithInvertLogicalConverter x:Key="BooleanToVisibilityWithInvertLogicalConverter" />
+</ResourceDictionary>

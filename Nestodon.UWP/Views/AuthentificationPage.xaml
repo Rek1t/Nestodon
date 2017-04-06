@@ -1,0 +1,61 @@
+﻿<Page
+    x:Class="Nestodon.UWP.Views.AuthentificationPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Nestodon.UWP.Views"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:controls="using:WinRTXamlToolkit.Controls"
+    xmlns:converters="using:WinRTXamlToolkit.Converters"
+    xmlns:windowsStateTriggers="using:WindowsStateTriggers"
+    mc:Ignorable="d"
+    DataContext="{Binding AuthentificationViewModelInstance, Source={StaticResource Locator}}">
+
+    <Grid Background="{StaticResource BackgroundPage}">
+        <StackPanel x:Name="ConnectStack"
+			Margin="20"
+			VerticalAlignment="Center"
+			Orientation="Vertical">
+            <TextBlock x:Uid="AuthentificationTitle" TextWrapping="Wrap" Foreground="{StaticResource BrushAccent}" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="40" />
+
+            <controls:WatermarkTextBox
+			Text="{Binding User, Mode=TwoWay}" Height="55" Background="#FFFFFFFF" FontSize="21.333" Style="{StaticResource WatermarkUserTemplate}" x:Name="UserBox" BorderBrush="{x:Null}" />
+            <controls:WatermarkPasswordBox Margin="0,10,0,0"
+			Password="{Binding Password, Mode=TwoWay}" Height="55" Background="#FFFFFFFF" FontSize="21.333" Style="{StaticResource WatermarkPasswordTemplate}" BorderBrush="{x:Null}" />
+
+            <Button
+            x:Name="ConnectButton"
+            x:Uid="ButtonConnect"
+			Margin="0,25,0,0"
+			Command="{Binding CheckAuthentificationCommand}"
+			Height="55" />
+            
+            <!-- Erreur -->
+            <TextBlock HorizontalAlignment="Center" Margin="0,40,0,0" TextWrapping="Wrap" FontSize="20" Text="{Binding MessageErreur}" Foreground="#FF4F0000"/>
+        </StackPanel>
+
+        <VisualStateManager.VisualStateGroups>
+            <VisualStateGroup x:Name="WindowStates">
+                <VisualState x:Name="WideState">
+                    <VisualState.StateTriggers>
+                        <windowsStateTriggers:DeviceFamilyStateTrigger DeviceFamily="Desktop" />
+                    </VisualState.StateTriggers>
+                    <VisualState.Setters>
+                        <Setter Target="ConnectStack.MaxWidth" Value="500" />
+                        <Setter Target="ConnectButton.HorizontalAlignment" Value="Center" />
+                        <Setter Target="UserBox.Margin" Value="0,80,0,0"/>
+                    </VisualState.Setters>
+                </VisualState>
+                <VisualState x:Name="NarrowState">
+                    <VisualState.StateTriggers>
+                        <windowsStateTriggers:DeviceFamilyStateTrigger DeviceFamily="Mobile" />
+                    </VisualState.StateTriggers>
+                    <VisualState.Setters>
+                        <Setter Target="ConnectButton.HorizontalAlignment" Value="Stretch" />
+                        <Setter Target="UserBox.Margin" Value="0,40,0,0"/>
+                    </VisualState.Setters>
+                </VisualState>
+            </VisualStateGroup>
+        </VisualStateManager.VisualStateGroups>
+    </Grid>
+</Page>
